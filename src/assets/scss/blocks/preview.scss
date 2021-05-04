@@ -1,0 +1,21 @@
+.preview{
+    
+    background-color: $white;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+    .preview__text{
+        padding:  35px 34px 35px  42px;
+        margin: 4px 0;
+        border-left: 4px solid $blue;
+    }
+    
+
+
+}
