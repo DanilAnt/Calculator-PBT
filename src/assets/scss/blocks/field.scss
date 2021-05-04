@@ -1,0 +1,95 @@
+.field{
+    width: 50%;
+    padding: 0 20px;
+    margin-bottom: 25px;
+        &first-child{
+            padding-left: 0;
+        }
+    .field__name{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: #989898;
+        margin-bottom: 4px;
+        &--required{
+            &:after{
+                content: "*";
+                color: red;
+            }
+        }
+
+    }
+    .form{
+        display: flex;
+        justify-content: flex-start;
+        
+    }
+}
+.custom-select {
+    position: relative;
+    border: 1px solid #E5E5E5;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: $white;
+    border: 1px solid #E5E5E5;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: $blue transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent $blue transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #666666;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: $white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #E5E5E5;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: lighten($color: $blue, $amount: 15%);
+  }

@@ -609,7 +609,8 @@ header {
   letter-spacing: 0em;
   text-align: left;
   border-radius: 5px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 30px; }
   .preview .preview__text {
     padding: 35px 34px 35px  42px;
     margin: 4px 0;
@@ -654,3 +655,99 @@ header {
           margin-right: 5px;
           color: #4496F6;
           font-weight: 700; }
+
+.remont-calculator {
+  background-color: #fff;
+  border: 1px solid #F5F5F5;
+  border-radius: 5px;
+  padding: 40px 30px 0 30px;
+  display: flex;
+  flex-wrap: wrap; }
+  .remont-calculator .remont-calculator__header {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 24px;
+    margin-left: 20px; }
+
+.field {
+  width: 50%;
+  padding: 0 20px;
+  margin-bottom: 25px; }
+  .fieldfirst-child {
+    padding-left: 0; }
+  .field .field__name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #989898;
+    margin-bottom: 4px; }
+    .field .field__name--required:after {
+      content: "*";
+      color: red; }
+  .field .form {
+    display: flex;
+    justify-content: flex-start; }
+
+.custom-select {
+  position: relative;
+  border: 1px solid #E5E5E5;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 100%; }
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/ }
+
+.select-selected {
+  background-color: #fff;
+  border: 1px solid #E5E5E5;
+  font-size: 18px;
+  border-radius: 5px; }
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #4496F6 transparent transparent transparent; }
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #4496F6 transparent;
+  top: 7px; }
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #666666;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none; }
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border: 1px solid #E5E5E5;
+  font-size: 18px;
+  border-radius: 5px; }
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none; }
+
+.select-items div:hover, .same-as-selected {
+  background-color: #8dbffa; }
