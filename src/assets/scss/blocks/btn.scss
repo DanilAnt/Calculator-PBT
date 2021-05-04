@@ -1,0 +1,16 @@
+.btn{
+    height: 38px;
+
+    left: 1412px;
+    top: 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: $white;
+    background-color: $blue;
+    white-space: nowrap;
+    padding: 0 15px;
+    transition: all 0.2s linear;
+    &:hover{
+        background-color: lighten($color: $blue, $amount: 5%);
+    }
+}
