@@ -25,6 +25,16 @@ title: Remarting-SPb | Calculator
                           </div> 
                       </form>
                 </div>
+
+                <div class="field">
+                    <h4 class="field__name field__name--required">Площадь ремонта:</h4>                    
+                    <div class="slidecontainer">
+                        <p class="slider__content"><span id="repair_area"></span> кв. м</p>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="repair_range">
+                    </div>   
+                </div>
+
+
                 <div class="field">
                     <h4 class="field__name field__name--required">Электрика:</h4>
                     <form class="form" name="house_type">
@@ -38,6 +48,16 @@ title: Remarting-SPb | Calculator
                           </div> 
                       </form>
                 </div>
+
+                <div class="field">
+                    <h4 class="field__name field__name--required">Общий периметр стен:</h4>                    
+                    
+                        <form class="form">
+                            <input class="form__input" type="text" placeholder="50 м">
+                        </form>
+                    
+                </div>
+
                 <div class="field">
                     <h4 class="field__name field__name--required">Тип ремонта:</h4>
                     <form class="form" name="house_type">
@@ -50,7 +70,8 @@ title: Remarting-SPb | Calculator
                             </select>
                           </div> 
                       </form>
-                </div><div class="field">
+                </div>
+                <div class="field">
                     <h4 class="field__name field__name--required">Потолки:</h4>
                     <form class="form" name="house_type">
                         <div class="custom-select">
@@ -63,7 +84,29 @@ title: Remarting-SPb | Calculator
                             </select>
                           </div> 
                       </form>
-                </div><div class="field">
+                </div>
+                <div class="field">
+                    <h4 class="field__name field__name--required">Ремонт санузла:</h4>
+                    <form class="form" name="house_type">
+                        <div class="custom-select">
+                            <select>
+                              <option value="0">Да</option>
+                              <option value="1">Да</option>
+                              <option value="2">Нет</option>
+                            </select>
+                          </div> 
+                      </form>
+                </div>
+
+                <div class="field">
+                    <h4 class="field__name field__name--required">Площадь санузла:</h4>                    
+                    <div class="slidecontainer">
+                        <p class="slider__content"><span id="san_area"></span> кв. м</p>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="san_range">
+                    </div>   
+                </div>
+
+                <div class="field">
                     <h4 class="field__name field__name--required">Тёплые полы:</h4>
                     <form class="form" name="house_type">
                         <div class="custom-select">
@@ -75,7 +118,11 @@ title: Remarting-SPb | Calculator
                             </select>
                           </div> 
                       </form>
-                </div><div class="field">
+                </div>
+                <div class="field">
+                    
+                </div>
+                <div class="field">
                     <h4 class="field__name field__name--required">Двери:</h4>
                     <form class="form" name="house_type">
                         <div class="custom-select">
@@ -90,9 +137,17 @@ title: Remarting-SPb | Calculator
                           </div> 
                       </form>
                 </div>
-                  
-                
+
+                <div class="field">
+                    <h4 class="field__name field__name--required">Входная дверь:</h4>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="switch__button round"></span>
+                    </label>
+                </div>
             </div>
+
+            
 
 
 

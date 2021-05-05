@@ -79,3 +79,26 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
 
+let slider = new Object();
+let output = new Object();
+
+
+slider.repair = document.getElementById("repair_range");
+output.repair  = document.getElementById("repair_area");
+output.repair.innerHTML = slider.repair.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.repair.oninput = function() {
+    output.repair.innerHTML = this.value;
+}
+
+
+slider.san = document.getElementById("san_range");
+output.san = document.getElementById("san_area");
+output.san.innerHTML = slider.san.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.san.oninput = function() {
+    output.san.innerHTML = this.value;
+}
+
