@@ -48,9 +48,10 @@ function calc(){
     
     value.front_door = front_door.checked;
     
-        wall_perimeter.value=parseInt(wall_perimeter.value);
-        if(isNaN(wall_perimeter.value)){
-            value[key]=0;
+    value.wall_perimeter=parseInt(value.wall_perimeter);
+        if(isNaN(value.wall_perimeter)){
+            value.wall_perimeter=50;
+            console.log(value.wall_perimeter)
         }
 
     let price;
@@ -60,11 +61,12 @@ function calc(){
     }else{
         price = 6000 * value.repair_range;
     }
-
+ 
+    
     if(value.electrics == 'частичная'){
-        price = price + 300 * value.repair_range;
+        price = price + 300 * value.wall_perimeter;
     }else if(value.electrics == 'новая'){
-        price = price + 600 * value.repair_range;
+        price = price + 600 * value.wall_perimeter;
     }
 
     if(value.repair=='дизайнерский'){
