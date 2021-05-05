@@ -154,7 +154,7 @@
                           </form>
                     </div>
     
-                    <div class="field">
+                    <div class="field hidden san_nessesery">
                         <h4 class="field__name field__name--required">Площадь санузла:</h4>                    
                         <div class="slidecontainer">
                             <p class="slider__content"><span id="san_area"></span> кв. м</p>
@@ -174,9 +174,11 @@
                               </div> 
                           </form>
                     </div>
-                    <div class="field">
-                        
+    
+                    <div class="field san_nessesery hidden">
+                        <!-- empty field -->
                     </div>
+    
                     <div class="field">
                         <h4 class="field__name field__name--required">Двери:</h4>
                         <form class="form" name="doors">
@@ -201,14 +203,19 @@
                         </label>
                     </div>
     
-    
-                    <div class="footer">
-                        <div class="footer__left">
-                            <div class="repair_price" id="repair_price"></div>
-                        </div>
-                        <div class="footer__right">
-                        </div>
-                    </div>
+                    <footer class="footer">
+                            <div class="footer__left">
+                                <h5 class="footer__header">Стоимость вашего ремонта</h5>
+                                <div class="footer__content">
+                                    <span class="footer__text">Итого:      </span> 
+                                    <div class="footer__text footer__text--fz footer__text--fw repair_price" id="repair_price"></div>
+                                    <span class="footer__text footer__text--fz footer__text--fw"> руб.</span>
+                                </div>
+                            </div>
+                            <div class="footer__right">
+                                    *Напоминаем, что это примерная стоимость
+                            </div>
+                    </footer>
                 </div>
     
                 
@@ -352,7 +359,7 @@
     </div>
     
 
-    <footer>Footer</footer>
+    
     <script src="assets/js/app.js"></script>
 </body>
 </html>

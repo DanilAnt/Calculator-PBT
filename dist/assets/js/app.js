@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/assets/js/animations.js":
+/*!*************************************!*\
+  !*** ./src/assets/js/animations.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./src/assets/js/animations.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/app.js":
 /*!******************************!*\
   !*** ./src/assets/js/app.js ***!
@@ -104,18 +115,18 @@ eval("\r\nvar x, i, j, l, ll, selElmnt, a, b, c;\r\n/*look for any elements with
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\r\nlet form  = new Object();\r\nlet value  = new Object();\r\nlet timerId = setInterval(calc, 200);\r\nlet repair_price = document.getElementById('repair_price')\r\n\r\nfunction calc(){\r\n    form.house_type = document.forms.house_type1;\r\n    value.house_type = select__house_type.value;\r\n\r\n    form.electrics = document.forms.electrics;\r\n    value.electrics = select__electrics.value;\r\n\r\n    form.repair = document.forms.repair;\r\n    value.repair = select__repair.value;\r\n\r\n    form.ceiling = document.forms.ceiling;\r\n    value.ceiling = select__ceiling.value;\r\n\r\n    form.bathroom = document.forms.bathroom;\r\n    value.bathroom = select__bathroom.value;\r\n\r\n    form.floor = document.forms.floor;\r\n    value.floor = select__floor.value;\r\n\r\n    form.doors = document.forms.doors;\r\n    value.doors = select__doors.value;\r\n\r\n    value.san_range = san_range.value;\r\n\r\n    value.repair_range = repair_range.value;\r\n\r\n    value.wall_perimeter = wall_perimeter.value;\r\n    \r\n    value.front_door = front_door.checked;\r\n    \r\n        wall_perimeter.value=parseInt(wall_perimeter.value);\r\n        if(isNaN(wall_perimeter.value)){\r\n            value[key]=0;\r\n        }\r\n\r\n    let price;\r\n\r\n    if(value.house_type=='новостойка'){\r\n        price = 8500 * value.repair_range;\r\n    }else{\r\n        price = 6000 * value.repair_range;\r\n    }\r\n\r\n    if(value.electrics == 'частичная'){\r\n        price = price + 300 * value.repair_range;\r\n    }else if(value.electrics == 'новая'){\r\n        price = price + 600 * value.repair_range;\r\n    }\r\n\r\n    if(value.repair=='дизайнерский'){\r\n        price = price + 3000 * value.repair_range;\r\n    }else if(value.repair=='капитальный'){\r\n        price = price + 1500 * value.repair_range;\r\n    }\r\n\r\n    if(value.bathroom==\"да\"){\r\n        price = price + 13000 * value.san_range;\r\n    }\r\n    if(value.ceiling=='гипсокартон'){\r\n        price = price + 300 * value.repair_range;\r\n    }else if(value.ceiling=='натяжной'){\r\n        price = price + 450 * value.repair_range;\r\n    }else if(value.ceiling=='2-уровня'){\r\n        price = price + 600 * value.repair_range;\r\n    }\r\n\r\n    if(value.floor==\"да\"){\r\n        price = price + 200 * value.repair_range;\r\n    }\r\n    if(isFinite(value.doors)){\r\n        price = price+8500*parseInt(value.doors);\r\n    }\r\n    \r\n    if(value.front_door){\r\n        price = price*1.05;\r\n    }\r\n\r\n    repair_price.innerHTML = price;\r\n}\n\n//# sourceURL=webpack:///./src/assets/js/calculations.js?");
+eval("\r\nlet form  = new Object();\r\nlet value  = new Object();\r\nlet timerCalc = setInterval(calc, 200);\r\nlet repair_price = document.getElementById('repair_price')\r\nconst san_nessesery = document.querySelectorAll('.san_nessesery');\r\n\r\nfunction calc(){\r\n    form.house_type = document.forms.house_type1;\r\n    value.house_type = select__house_type.value;\r\n\r\n    form.electrics = document.forms.electrics;\r\n    value.electrics = select__electrics.value;\r\n\r\n    form.repair = document.forms.repair;\r\n    value.repair = select__repair.value;\r\n\r\n    form.ceiling = document.forms.ceiling;\r\n    value.ceiling = select__ceiling.value;\r\n\r\n    form.bathroom = document.forms.bathroom;\r\n    value.bathroom = select__bathroom.value;\r\n    if(value.bathroom=='нет'){\r\n        san_nessesery.forEach(item => {\r\n            if(!(item.classList.contains('hidden'))){\r\n            item.classList.add('hidden');\r\n            }\r\n        });\r\n    }else{\r\n        san_nessesery.forEach(item => {\r\n            if((item.classList.contains('hidden'))){\r\n            item.classList.remove('hidden');\r\n            }\r\n        });\r\n    }\r\n\r\n    form.floor = document.forms.floor;\r\n    value.floor = select__floor.value;\r\n\r\n    form.doors = document.forms.doors;\r\n    value.doors = select__doors.value;\r\n\r\n    value.san_range = san_range.value;\r\n\r\n    value.repair_range = repair_range.value;\r\n\r\n    value.wall_perimeter = wall_perimeter.value;\r\n    \r\n    value.front_door = front_door.checked;\r\n    \r\n        wall_perimeter.value=parseInt(wall_perimeter.value);\r\n        if(isNaN(wall_perimeter.value)){\r\n            value[key]=0;\r\n        }\r\n\r\n    let price;\r\n\r\n    if(value.house_type=='новостойка'){\r\n        price = 8500 * value.repair_range;\r\n    }else{\r\n        price = 6000 * value.repair_range;\r\n    }\r\n\r\n    if(value.electrics == 'частичная'){\r\n        price = price + 300 * value.repair_range;\r\n    }else if(value.electrics == 'новая'){\r\n        price = price + 600 * value.repair_range;\r\n    }\r\n\r\n    if(value.repair=='дизайнерский'){\r\n        price = price + 3000 * value.repair_range;\r\n    }else if(value.repair=='капитальный'){\r\n        price = price + 1500 * value.repair_range;\r\n    }\r\n\r\n    if(value.bathroom==\"да\"){\r\n        price = price + 13000 * value.san_range;\r\n    }\r\n    if(value.ceiling=='гипсокартон'){\r\n        price = price + 300 * value.repair_range;\r\n    }else if(value.ceiling=='натяжной'){\r\n        price = price + 450 * value.repair_range;\r\n    }else if(value.ceiling=='2-уровня'){\r\n        price = price + 600 * value.repair_range;\r\n    }\r\n\r\n    if(value.floor==\"да\"){\r\n        price = price + 200 * value.repair_range;\r\n    }\r\n    if(isFinite(value.doors)){\r\n        price = price+8500*parseInt(value.doors);\r\n    }\r\n    \r\n    if(value.front_door){\r\n        price = price*1.05;\r\n    }\r\n\r\n    repair_price.innerHTML = price;\r\n}\n\n//# sourceURL=webpack:///./src/assets/js/calculations.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************!*\
-  !*** multi ./src/assets/js/app.js ./src/assets/js/calculations.js ***!
-  \********************************************************************/
+/*!**************************************************************************************************!*\
+  !*** multi ./src/assets/js/animations.js ./src/assets/js/app.js ./src/assets/js/calculations.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! /Users/Danil/Desktop/calculator/Calculator-PBT/src/assets/js/app.js */\"./src/assets/js/app.js\");\nmodule.exports = __webpack_require__(/*! /Users/Danil/Desktop/calculator/Calculator-PBT/src/assets/js/calculations.js */\"./src/assets/js/calculations.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/calculations.js?");
+eval("__webpack_require__(/*! /Users/Danil/Desktop/calculator/Calculator-PBT/src/assets/js/animations.js */\"./src/assets/js/animations.js\");\n__webpack_require__(/*! /Users/Danil/Desktop/calculator/Calculator-PBT/src/assets/js/app.js */\"./src/assets/js/app.js\");\nmodule.exports = __webpack_require__(/*! /Users/Danil/Desktop/calculator/Calculator-PBT/src/assets/js/calculations.js */\"./src/assets/js/calculations.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/animations.js_./src/assets/js/app.js_./src/assets/js/calculations.js?");
 
 /***/ })
 

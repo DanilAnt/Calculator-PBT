@@ -1,8 +1,9 @@
 
 let form  = new Object();
 let value  = new Object();
-let timerId = setInterval(calc, 200);
+let timerCalc = setInterval(calc, 200);
 let repair_price = document.getElementById('repair_price')
+const san_nessesery = document.querySelectorAll('.san_nessesery');
 
 function calc(){
     form.house_type = document.forms.house_type1;
@@ -19,6 +20,19 @@ function calc(){
 
     form.bathroom = document.forms.bathroom;
     value.bathroom = select__bathroom.value;
+    if(value.bathroom=='нет'){
+        san_nessesery.forEach(item => {
+            if(!(item.classList.contains('hidden'))){
+            item.classList.add('hidden');
+            }
+        });
+    }else{
+        san_nessesery.forEach(item => {
+            if((item.classList.contains('hidden'))){
+            item.classList.remove('hidden');
+            }
+        });
+    }
 
     form.floor = document.forms.floor;
     value.floor = select__floor.value;

@@ -98,7 +98,7 @@ title: Remarting-SPb | Calculator
                       </form>
                 </div>
 
-                <div class="field">
+                <div class="field hidden san_nessesery">
                     <h4 class="field__name field__name--required">Площадь санузла:</h4>                    
                     <div class="slidecontainer">
                         <p class="slider__content"><span id="san_area"></span> кв. м</p>
@@ -118,9 +118,11 @@ title: Remarting-SPb | Calculator
                           </div> 
                       </form>
                 </div>
-                <div class="field">
-                    
+
+                <div class="field san_nessesery hidden">
+                    <!-- empty field -->
                 </div>
+
                 <div class="field">
                     <h4 class="field__name field__name--required">Двери:</h4>
                     <form class="form" name="doors">
@@ -145,14 +147,7 @@ title: Remarting-SPb | Calculator
                     </label>
                 </div>
 
-
-                <div class="footer">
-                    <div class="footer__left">
-                        <div class="repair_price" id="repair_price"></div>
-                    </div>
-                    <div class="footer__right">
-                    </div>
-                </div>
+                {{> footer }}
             </div>
 
             
