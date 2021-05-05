@@ -102,3 +102,9 @@ slider.san.oninput = function() {
     output.san.innerHTML = this.value;
 }
 
+const body = document.body;
+const burger = document.getElementById('burger');
+
+burger.addEventListener('click', event =>{
+  body.classList.toggle('show-sidebar');
+});

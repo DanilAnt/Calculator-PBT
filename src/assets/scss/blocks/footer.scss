@@ -1,26 +1,54 @@
 .footer{
-    width: 100%;
+
     margin: 0 -30px;
     margin-top: 60px;
     display: flex;
+    justify-content: center;
     height: 130px;
+    @include bp($lg){
+        flex-direction: column-reverse;
+        width: 120%;
+        margin-top: 20px;
+        @include bp($sm){
+            width: 140%;
+        }
+    }
+
     .footer__left{
         padding: 30px;
         width: 55%;
+        min-width: 400px;
         height: 100%;
         background: #347DB8;
         border-radius: 0px 0px 0px 5px; 
         color: $white;
-
+        @include bp($lg){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            @include bp($sm){
+                min-width: 0;
+            }
+        }
         h5{
             font-size: 18px;
             font-weight: 400;
             line-height: 24px;
             text-align: left;
             margin-bottom: 14px;
+            @include bp($sm){
+                margin-bottom: 0px;
+                font-size: 14px;
+            }
         }
         .footer__content{
             display: flex;
+            @include bp($lg){
+                padding-bottom: 30px;
+    
+            }
             .footer__text{
                 font-size: 24px;
                 font-style: normal;
@@ -29,8 +57,14 @@
                 letter-spacing: 0em;
                 text-align: left;
                 white-space:  break-spaces;
+                @include bp($sm){
+                    font-size: 18px;
+                }
                 &--fz{
                     font-size: 36px;
+                    @include bp($sm){
+                        font-size: 24px;
+                    }
                 }
                 &--fw{
                     font-weight: 700;
@@ -48,7 +82,15 @@
         font-weight: 300;
         line-height: 22px;
         text-align: left;
-        padding: 40px 150px 50px 40px;
-
+        padding: 40px 0px 50px 40px;
+        display: flex;
+        justify-content: center;
+        @include bp($lg){
+            width: 100%;
+            padding: 20px;
+            .br{
+                display: none;
+            }
+        }
     }
 }

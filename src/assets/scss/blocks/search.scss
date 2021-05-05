@@ -3,6 +3,19 @@
     
     height: 38px;
     margin: 0 35px 0 70px;
+    @include bp($lg){
+      margin: 0 15px 0 30px;
+      @include bp($md){
+        margin: 0 8px 0 10px;
+        transition: all 0.2s linear;
+        .show-sidebar &{
+          position: absolute;
+          top: 15px;
+          right: 50px;
+           transform: translateX(-150vw);
+      }
+      }
+    }
     .search__form{
       overflow: hidden;
       width: 100%;
@@ -28,6 +41,9 @@
         font-weight: 400;
         line-height: 14px;
         padding-left: 20px;
+        @include bp($md){
+          padding-left: 8px;
+        }
       }
     }
 }  

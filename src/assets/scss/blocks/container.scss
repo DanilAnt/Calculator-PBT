@@ -4,5 +4,9 @@
     padding-right: 25px;
     margin: 0 auto;
     overflow: hidden;
-
+    
+    @include bp($sm){
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }

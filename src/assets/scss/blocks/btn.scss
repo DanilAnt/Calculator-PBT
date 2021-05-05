@@ -13,4 +13,16 @@
     &:hover{
         background-color: lighten($color: $blue, $amount: 5%);
     }
+    &--desktop{
+        @include bp($md){
+            display: none;
+        }
+        
+    } 
+    &--mobile{
+        font-size: 14px;
+        width: 210px;
+        padding: 0;
+    }
+    
 }

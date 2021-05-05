@@ -1,9 +1,15 @@
 .companies{
+    display: flex;
+    flex-direction: column;
     background: $white;
     border: 1px solid #F5F5F5;
     overflow: hidden;
     border-radius: 10px;
     padding: 12px;
+    @include bp($md){
+        padding: 15px 5px;
+        
+    }
     .companies__header{
         padding: 0 10px;
         font-size: 20px;
@@ -11,6 +17,10 @@
         line-height: 25px;
         text-align: center;
         margin-bottom: 20px;
+        @include bp($lg){
+            font-size: 14px;
+            
+        }
     }
     .companies__list{
         display: flex;
@@ -27,19 +37,39 @@
                 align-items: center;
                 justify-content: flex-start;
                 padding-right: 15px;
-                margin-right: 15px;
+
+                width: 100%;
                 .companies__icon{
                     width: 42px;
                     height: 42px;
                     margin-right: 10px;
                 }
+                .companies__name{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    @media(max-width:1100px){
+                        max-width: 51px;
+                    }
+                    
+                }
             }
             .companies__bonus{
                 display: flex;
+                background: #FAFAFA;
+                padding: 12px;
                 &--amount{
                   margin-right: 5px;
                   color: $blue;
                   font-weight: 700;
+                }
+                &--type{
+                    @include bp($lg){
+                        display: none;
+                    }
                 }
             }
         }

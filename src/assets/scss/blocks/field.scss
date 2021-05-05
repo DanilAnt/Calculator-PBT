@@ -7,6 +7,10 @@
     &.hidden{
       display: none;
     }
+    @include bp($md){
+      width: 100%;
+      padding-right: 0;
+    }
     .field__name{
         font-size: 12px;
         font-weight: 400;

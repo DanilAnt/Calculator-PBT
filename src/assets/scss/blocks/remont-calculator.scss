@@ -6,7 +6,9 @@
 
     display: flex;
     flex-wrap: wrap;
-
+    @include bp($lg){
+        overflow: hidden;
+    }
     .remont-calculator__header{
         width: 100%;
         font-size: 22px;

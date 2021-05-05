@@ -9,13 +9,20 @@
     letter-spacing: 0em;
     text-align: left;
     border-radius: 5px;
-    overflow: hidden;
+    
     .preview__text{
         padding:  35px 34px 35px  42px;
         margin: 4px 0;
         border-left: 4px solid $blue;
+        @include bp($sm){
+            font-size: 18px;
+            padding: 15px;
+        }
     }
     margin-bottom: 30px;
-
+    overflow: hidden;
+    @include bp($sm){
+        margin-bottom: 15px;
+    }
 
 }
