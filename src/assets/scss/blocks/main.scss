@@ -1,5 +1,12 @@
 .main{
     display: flex;
+    margin-top: 130px;
+    @include bp($lg){
+        margin-top: 120px;
+    }
+    @include bp($md){
+        margin-top: 80px;
+    }
     .main__left{
   
         max-width: 840px;

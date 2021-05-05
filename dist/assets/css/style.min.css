@@ -762,7 +762,14 @@ header {
         transform: translateX(0); } }
 
 .main {
-  display: flex; }
+  display: flex;
+  margin-top: 130px; }
+  @media (max-width: 991px) {
+    .main {
+      margin-top: 120px; } }
+  @media (max-width: 768px) {
+    .main {
+      margin-top: 80px; } }
   .main .main__left {
     max-width: 840px;
     margin-right: 15px; }
@@ -799,9 +806,12 @@ header {
       .preview .preview__text {
         font-size: 18px;
         padding: 15px; } }
-  @media (max-width: 576px) {
+  @media (max-width: 991px) {
     .preview {
       margin-bottom: 15px; } }
+  @media (max-width: 991px) and (max-width: 768px) {
+    .preview {
+      margin-bottom: 10px; } }
 
 .companies {
   display: flex;
