@@ -73,10 +73,10 @@
                         <h4 class="field__name field__name--required">Тип помещения:</h4>
                         <form class="form" name="house_type">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Новостойка</option>
-                                  <option value="1">Новостойка</option>
-                                  <option value="2">Вторичка</option>
+                                <select id="select__house_type">
+                                  <option value="новостойка">Новостойка</option>
+                                  <option value="новостойка">Новостойка</option>
+                                  <option value="вторичка">Вторичка</option>
                                 </select>
                               </div> 
                           </form>
@@ -86,20 +86,20 @@
                         <h4 class="field__name field__name--required">Площадь ремонта:</h4>                    
                         <div class="slidecontainer">
                             <p class="slider__content"><span id="repair_area"></span> кв. м</p>
-                            <input type="range" min="1" max="100" value="50" class="slider" id="repair_range">
+                            <input type="range" min="1" max="300" value="50" class="slider" id="repair_range">
                         </div>   
                     </div>
     
     
                     <div class="field">
                         <h4 class="field__name field__name--required">Электрика:</h4>
-                        <form class="form" name="house_type">
+                        <form class="form" name="electrics">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Нет</option>
-                                  <option value="1">Нет</option>
-                                  <option value="2">Частичная замена и подключение</option>
-                                  <option value="3">Новая от вводного кабеля</option>
+                                <select id="select__electrics">
+                                  <option value="нет">Нет</option>
+                                  <option value="нет">Нет</option>
+                                  <option value="частичная">Частичная замена и подключение</option>
+                                  <option value="новая">Новая от вводного кабеля</option>
                                 </select>
                               </div> 
                           </form>
@@ -109,46 +109,46 @@
                         <h4 class="field__name field__name--required">Общий периметр стен:</h4>                    
                         
                             <form class="form">
-                                <input class="form__input" type="text" placeholder="50 м">
+                                <input class="form__input" type="text" placeholder="50 м" value="50 м" id="wall_perimeter">
                             </form>
                         
                     </div>
     
                     <div class="field">
                         <h4 class="field__name field__name--required">Тип ремонта:</h4>
-                        <form class="form" name="house_type">
+                        <form class="form" name="repair">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Косметический</option>
-                                  <option value="1">Косметический</option>
-                                  <option value="2">Дизайнерский</option>
-                                  <option value="3">Капитальный</option>
+                                <select id="select__repair">
+                                  <option value="косметический">Косметический</option>
+                                  <option value="косметический">Косметический</option>
+                                  <option value="дизайнерский">Дизайнерский</option>
+                                  <option value="капитальный">Капитальный</option>
                                 </select>
                               </div> 
                           </form>
                     </div>
                     <div class="field">
                         <h4 class="field__name field__name--required">Потолки:</h4>
-                        <form class="form" name="house_type">
+                        <form class="form" name="ceiling">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Нет</option>
-                                  <option value="1">Нет</option>
-                                  <option value="2">Гипсокартон</option>
-                                  <option value="3">Натяжной</option>
-                                  <option value="4">2-уровня гиспокартон</option>
+                                <select id="select__ceiling">
+                                  <option value="нет">Нет</option>
+                                  <option value="нет">Нет</option>
+                                  <option value="гипсокартон">Гипсокартон</option>
+                                  <option value="натяжной">Натяжной</option>
+                                  <option value="2-уровня">2-уровня гиспокартон</option>
                                 </select>
                               </div> 
                           </form>
                     </div>
                     <div class="field">
                         <h4 class="field__name field__name--required">Ремонт санузла:</h4>
-                        <form class="form" name="house_type">
+                        <form class="form" name="bathroom">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Да</option>
-                                  <option value="1">Да</option>
-                                  <option value="2">Нет</option>
+                                <select id="select__bathroom">
+                                  <option value="да">Да</option>
+                                  <option value="да">Да</option>
+                                  <option value="нет">Нет</option>
                                 </select>
                               </div> 
                           </form>
@@ -158,19 +158,18 @@
                         <h4 class="field__name field__name--required">Площадь санузла:</h4>                    
                         <div class="slidecontainer">
                             <p class="slider__content"><span id="san_area"></span> кв. м</p>
-                            <input type="range" min="1" max="100" value="50" class="slider" id="san_range">
+                            <input type="range" min="1" max="20" value="10" class="slider" id="san_range">
                         </div>   
                     </div>
     
                     <div class="field">
                         <h4 class="field__name field__name--required">Тёплые полы:</h4>
-                        <form class="form" name="house_type">
+                        <form class="form" name="floor">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Нет</option>
-                                  <option value="1">Нет</option>
-                                  <option value="2">Да</option>
-                                  
+                                <select id="select__floor">
+                                  <option value="нет">Нет</option>
+                                  <option value="нет">Нет</option>
+                                  <option value="да">Да</option>
                                 </select>
                               </div> 
                           </form>
@@ -180,15 +179,15 @@
                     </div>
                     <div class="field">
                         <h4 class="field__name field__name--required">Двери:</h4>
-                        <form class="form" name="house_type">
+                        <form class="form" name="doors">
                             <div class="custom-select">
-                                <select>
-                                  <option value="0">Нет</option>
-                                  <option value="1">Нет</option>
-                                  <option value="2">1</option>
-                                  <option value="3">2</option>
-                                  <option value="4">3</option>
-                                  <option value="5">4</option>
+                                <select id="select__doors">
+                                  <option value="нет">Нет</option>
+                                  <option value="нет">Нет</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
                                 </select>
                               </div> 
                           </form>
@@ -197,12 +196,22 @@
                     <div class="field">
                         <h4 class="field__name field__name--required">Входная дверь:</h4>
                         <label class="switch">
-                            <input type="checkbox" checked>
+                            <input type="checkbox" checked id="front_door">
                             <span class="switch__button round"></span>
                         </label>
                     </div>
+    
+    
+                    <div class="footer">
+                        <div class="footer__left">
+                            <div class="repair_price" id="repair_price"></div>
+                        </div>
+                        <div class="footer__right">
+                        </div>
+                    </div>
                 </div>
     
+                
                 
     
     

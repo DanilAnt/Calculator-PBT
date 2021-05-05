@@ -864,3 +864,6 @@ header {
       -webkit-transition: .4s;
       transition: .4s;
       border-radius: 50%; }
+
+.footer {
+  margin-top: 200px; }
